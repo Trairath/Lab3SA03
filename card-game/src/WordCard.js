@@ -17,7 +17,9 @@ const prepareStateFromWord = (given_word) => {
 export default function WordCard(props){
 
     const [state, setState] = useState(prepareStateFromWord(props.value))
-  
+    const restart=()=> {
+        document.location.reload()
+    }
     const activationHandler = c => {
         console.log(`${c} has been activated.`)
         let guess = state.guess + c
@@ -36,7 +38,7 @@ export default function WordCard(props){
  return (
  <div>
     { state.chars.map((c, i) => <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>) }
-
+    <button className="btnRe" onClick={restart}>RELOAD</button>
  </div>
  
  );
