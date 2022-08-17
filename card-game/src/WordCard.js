@@ -38,7 +38,8 @@ export default function WordCard(props){
  return (
  <div>
     { state.chars.map((c, i) => <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>) }
-    <button className="btnRe" onClick={restart}>RELOAD</button>
+    <h1><button className="btnRe" onClick={restart}>RELOAD</button></h1>
+    <h3>Your attemp : {state.attempt}</h3>
  </div>
  
  );
