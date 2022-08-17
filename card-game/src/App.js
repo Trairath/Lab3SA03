@@ -5,7 +5,7 @@ import _ from 'lodash'
 
 function App() {
 
-  const word = ["hello","sweet","scorpion","macaron","happy","never"];
+  const word = ["hello","sweet","again","laugh","happy","never"];
   const randomElement = _.sample(word);
 
   const Header=()=>{
